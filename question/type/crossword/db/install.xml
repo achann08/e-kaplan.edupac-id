@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="question/type/crossword/db" VERSION="20230310" COMMENT="XMLDB file for Moodle question/type/crossword"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="qtype_crossword_options" COMMENT="qtype_crossword_options  settings">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="questionid" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Foreign key references question.id."/>
+        <FIELD NAME="numrows" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="A number of rows."/>
+        <FIELD NAME="numcolumns" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="The number of columns."/>
+        <FIELD NAME="accentgradingtype" TYPE="char" LENGTH="20" NOTNULL="true" DEFAULT="strict" SEQUENCE="false" COMMENT="Accent grading type column."/>
+        <FIELD NAME="accentpenalty" TYPE="number" LENGTH="12" NOTNULL="true" DEFAULT="0.5" SEQUENCE="false" DECIMALS="7" COMMENT="Grade for answers with incorrect accents column."/>
+        <FIELD NAME="correctfeedback" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Feedback shown for any correct response."/>
+        <FIELD NAME="correctfeedbackformat" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="partiallycorrectfeedback" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Feedback shown for any partially correct response."/>
+        <FIELD NAME="partiallycorrectfeedbackformat" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="incorrectfeedback" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Feedback shown for any incorrect response."/>
+        <FIELD NAME="incorrectfeedbackformat" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="shownumcorrect" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="If true, then when the user gets a multiple-response question partially correct, tell them how many choices they got correct alongside the feedback."/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="questionid" TYPE="foreign" FIELDS="questionid" REFTABLE="question" REFFIELDS="id" COMMENT="Foreign key references question id."/>
+      </KEYS>
+    </TABLE>
+    <TABLE NAME="qtype_crossword_words" COMMENT="Contains settings for words">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="questionid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="Redundant, because of the answer field. Foreign key references question.id."/>
+        <FIELD NAME="clue" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="The clue text."/>
+        <FIELD NAME="clueformat" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+        <FIELD NAME="answer" TYPE="char" LENGTH="200" NOTNULL="true" SEQUENCE="false" COMMENT="The answer text."/>
+        <FIELD NAME="startcolumn" TYPE="int" LENGTH="2" NOTNULL="false" SEQUENCE="false" COMMENT="The vertical index."/>
+        <FIELD NAME="startrow" TYPE="int" LENGTH="2" NOTNULL="true" SEQUENCE="false" COMMENT="Horizontal index."/>
+        <FIELD NAME="orientation" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="0 = across, 1 = down."/>
+        <FIELD NAME="feedback" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Feedback for answer"/>
+        <FIELD NAME="feedbackformat" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="1" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="questionid" TYPE="foreign" FIELDS="questionid" REFTABLE="question" REFFIELDS="id" COMMENT="Foreign key references question id."/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

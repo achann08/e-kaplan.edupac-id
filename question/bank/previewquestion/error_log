@@ -1,0 +1,28 @@
+[04-Nov-2024 20:48:17 America/New_York] Default exception handler: Can't find data record in database. Debug: SELECT q.id, qc.id as category, q.parent, q.name, q.questiontext, q.questiontextformat,
+                       q.generalfeedback, q.generalfeedbackformat, q.defaultmark, q.penalty, q.qtype,
+                       q.length, q.stamp, q.timecreated, q.timemodified,
+                       q.createdby, q.modifiedby, qbe.idnumber,
+                       qc.contextid,
+                       qv.status,
+                       qv.id as versionid,
+                       qv.version,
+                       qv.questionbankentryid
+                  FROM {question} q
+                  JOIN {question_versions} qv ON qv.questionid = q.id
+                  JOIN {question_bank_entries} qbe ON qbe.id = qv.questionbankentryid
+                  JOIN {question_categories} qc ON qc.id = qbe.questioncategoryid
+                 WHERE q.id = :id
+[array (
+  'id' => 58614,
+)]
+Error code: invalidrecordunknown
+* line 1682 of /lib/dml/moodle_database.php: dml_missing_record_exception thrown
+* line 677 of /question/engine/bank.php: call to moodle_database->get_record_sql()
+* line 587 of /cache/classes/loaders.php: call to question_finder->load_for_cache()
+* line 1871 of /cache/classes/loaders.php: call to cache->get_implementation()
+* line 405 of /cache/classes/loaders.php: call to cache_application->get_implementation()
+* line 526 of /question/engine/bank.php: call to cache->get()
+* line 255 of /question/engine/bank.php: call to question_finder->load_question_data()
+* line 273 of /question/engine/bank.php: call to question_bank::load_question_data()
+* line 54 of /question/bank/previewquestion/preview.php: call to question_bank::load_question()
+

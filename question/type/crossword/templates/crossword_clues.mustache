@@ -1,0 +1,96 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template qtype_crossword/crossword_clues
+
+    Data to generate crossword.
+
+    Example context (json):
+    {
+      "questiontext": "crossword",
+      "across": [
+        {
+          "number": "",
+          "clue": "",
+          "length": "",
+          "value": "",
+          "attributes": "id=q38:1_sub0",
+          "feedbackimage": "",
+          "title": "",
+          "id": "q38:1_sub0",
+          "orientation": 0,
+          "startRow": 0,
+          "startColumn": 0,
+          "ignoreIndexes": ""
+        }
+      ],
+      "down": [
+        {
+          "number": "",
+          "clue": "",
+          "length": "",
+          "value": "",
+          "attributes": "id=q38:1_sub1",
+          "feedbackimage": "",
+          "title": "Title",
+          "id": "q38:1_sub1",
+          "orientation": 0,
+          "startRow": 0,
+          "startColumn": 0,
+          "ignoreIndexes": ""
+        }
+      ]
+    }
+}}
+
+<div class="qtext clearfix"> {{{ questiontext }}}</div>
+<div class="qtype_crossword-grid-wrapper">
+    <div class="row mx-auto my-3">
+        <div class="col-12 wrap-crossword position-relative px-0">
+            <div class="sticky-clue d-flex d-md-none pb-3 pb-md-0 justify-content-start">
+            </div>
+            <div>
+                <div class="mx-auto overflow-auto" id="crossword"></div>
+            </div>
+        </div>
+        <div class="col-12 px-md-0 px-3 py-3">
+            <div class="contain-clue">
+                <div class="row mx-auto">
+                    <h5 class="orientation w-100">{{#str}} across, qtype_crossword {{/str}}</h5>
+                    <div class="across-contain w-100">
+                        {{#across}}
+                            {{> qtype_crossword/clue }}
+                        {{/across}}
+                    </div>
+                </div>
+                <div class="row mx-auto mt-3">
+                    <h5 class="orientation w-100">{{#str}} down, qtype_crossword {{/str}}</h5>
+                    <div class="down-contain w-100">
+                        {{#down}}
+                            {{> qtype_crossword/clue }}
+                        {{/down}}
+                    </div>
+                </div>
+            </div>
+            {{#invalidquestion}}
+                <div class="validationerror mt-3">
+                    {{invalidquestion}}
+                </div>
+            {{/invalidquestion}}
+        </div>
+    </div>
+</div>

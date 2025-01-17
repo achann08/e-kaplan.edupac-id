@@ -1,0 +1,13 @@
+[05-Jul-2024 09:04:23 America/New_York] Cannot find session record ojdrtkejeajr4jbvu1e4f9ggs9 for user 2, creating new session.
+[04-Nov-2024 03:38:29 America/New_York] Default exception handler: Sorry, but your session key could not be confirmed to carry out this action.  This security feature prevents against accidental or malicious execution of important functions in your name.  Please make sure you really wanted to execute this function. Debug: 
+Error code: confirmsesskeybad
+* line 34 of /course/jumpto.php: moodle_exception thrown
+
+[04-Nov-2024 03:51:19 America/New_York] Default exception handler: Sorry, but your session key could not be confirmed to carry out this action.  This security feature prevents against accidental or malicious execution of important functions in your name.  Please make sure you really wanted to execute this function. Debug: 
+Error code: confirmsesskeybad
+* line 34 of /course/jumpto.php: moodle_exception thrown
+
+[04-Nov-2024 04:02:37 America/New_York] Default exception handler: Sorry, but your session key could not be confirmed to carry out this action.  This security feature prevents against accidental or malicious execution of important functions in your name.  Please make sure you really wanted to execute this function. Debug: 
+Error code: confirmsesskeybad
+* line 34 of /course/jumpto.php: moodle_exception thrown
+

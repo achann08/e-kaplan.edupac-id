@@ -1,0 +1,9 @@
+[04-Nov-2024 21:18:49 America/New_York] Default exception handler: Your session has most likely timed out. Please log in again. Debug: 
+Error code: invalidsesskey
+* line 33 of /lib/ajax/setuserpref.php: moodle_exception thrown
+
+[05-Nov-2024 01:27:15 America/New_York] Default exception handler: Your session has most likely timed out. Please log in again. Debug: 
+Error code: invalidsesskey
+* line 33 of /lib/ajax/setuserpref.php: moodle_exception thrown
+
+[14-Jan-2025 03:01:21 America/New_York] Cannot find session record jnhjiuol9n2952a3ot97ub8fkq for user 219, creating new session.

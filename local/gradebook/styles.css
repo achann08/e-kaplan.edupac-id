@@ -1,0 +1,88 @@
+/**
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+/**
+ * @author Daniel Tome <danieltomefer@gmail.com>
+ */
+ul#local-gradebook-options {
+    list-style: none;
+}
+
+.list-without-style {
+    list-style-type: none;
+}
+
+ul#local-gradebook-options li {
+    display: inline;
+}
+
+.local-gradebook-tree-size {
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.local-gradebook-buttons-size {
+    width: 10%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#borderless td, #borderless th {
+    border: none;
+}
+
+.local-gradebook-margin-bottom {
+    margin-bottom: 10px;
+}
+
+.special {
+    display: inline-block;
+}
+
+#id_cancelbutton {
+    margin: 0 0 10px 5px;
+}
+
+#id_resetbutton {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #da4f49;
+    background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+    background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+    background-image: linear-gradient(to bottom, #ee5f5b, #bd362f);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+    border-color: #bd362f #bd362f #802420;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    *background-color: #bd362f;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+a.action-icon {
+    visibility: hidden;
+}
+
+.column-idnumber,
+.column-operation {
+    font-weight: normal;
+}

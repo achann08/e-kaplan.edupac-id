@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <!-- question: 145  -->
+    <question type="crossword">
+        <name>
+            <text>Test crossword</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p dir="ltr" style="text-align: left;">Crossword question text</p>]]></text>
+        </questiontext>
+        <generalfeedback format="html">
+            <text><![CDATA[<p dir="ltr" style="text-align: left;">Crossword general feedback<br></p>]]></text>
+        </generalfeedback>
+        <defaultgrade>3</defaultgrade>
+        <penalty>0.3333333</penalty>
+        <hidden>0</hidden>
+        <idnumber>Crossword  idnumber</idnumber>
+        <numrows>0</numrows>
+        <numcolumns>0</numcolumns>
+        <accentgradingtype>penalty</accentgradingtype>
+        <accentpenalty>0.2</accentpenalty>
+        <word>
+            <answer>AAA</answer>
+            <clue format="html">
+            <text>Clue 1</text>
+            </clue>
+            <orientation>0</orientation>
+            <rowindex>0</rowindex>
+            <columnindex>0</columnindex>
+        </word>
+        <word>
+            <answer>BBB</answer>
+            <clue format="html">
+                <text>Clue 2</text>
+            </clue>
+            <orientation>0</orientation>
+            <rowindex>1</rowindex>
+            <columnindex>0</columnindex>
+        </word>
+        <word>
+            <answer>CCC</answer>
+            <clue format="html">
+                <text>Clue 3</text>
+            </clue>
+            <orientation>0</orientation>
+            <rowindex>2</rowindex>
+            <columnindex>0</columnindex>
+        </word>
+        <correctfeedback format="html">
+            <text>Your answer is correct. 1</text>
+        </correctfeedback>
+        <partiallycorrectfeedback format="html">
+            <text>Your answer is partially correct. 2</text>
+        </partiallycorrectfeedback>
+        <incorrectfeedback format="html">
+            <text>Your answer is incorrect. 3</text>
+        </incorrectfeedback>
+        <shownumcorrect />
+        <hint format="html">
+            <text><![CDATA[<p dir="ltr" style="text-align: left;">Hint 1</p>]]></text>
+        </hint>
+        <hint format="html">
+            <text><![CDATA[<p dir="ltr" style="text-align: left;">Hint 2</p>]]></text>
+        </hint>
+    </question>
+</quiz>

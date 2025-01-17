@@ -1,0 +1,64 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template qtype_crossword/clue
+
+    Data to generate crossword.
+
+    Example context (json):
+    {
+      "number": "1",
+      "clue": "<p>What this plugin is.</p>",
+      "lengthDisplay": "(8, 4)",
+      "length": 12,
+      "value": "",
+      "attributes": "id=q38:1_sub1",
+      "feedbackimage": "",
+      "label": "1 across What this plugin is. Answer length 8, 4",
+      "id": "q38:1_sub1",
+      "orientation": 0,
+      "startRow": 0,
+      "startColumn": 0,
+      "feedback": "<p>fThis plugin is a question type.</p>",
+      "ignoreIndexes": "['space' => [8]]"
+    }
+}}
+<div class="col-12 wrap-clue" data-questionid="{{number}}" data-startrow="{{startRow}}" data-ignoreindexes="{{ignoreIndexes}}"
+    data-startcolumn="{{startColumn}}" data-length="{{length}}" data-orientation="{{orientation}}" data-clue="{{clue}}">
+    <div class="d-flex my-2">
+        <div class="clue-id"><span>{{number}}</span></div>
+        <div class="clue-content mr-1">{{{clue}}}</div>
+        <div class="clue-count text-nowrap">({{lengthDisplay}})</div>
+    </div>
+    <label class="accesshide" for="{{id}}">{{label}}</label>
+    <input
+        type="text"
+        class="control {{classes}}"
+    {{attributes}}
+        value="{{value}}"
+        disabled
+        autocomplete="off"
+        spellcheck="false">
+    {{#feedbackimage}}
+        {{{feedbackimage}}}
+    {{/feedbackimage}}
+    {{#feedback}}
+        <div class="outcome clearfix my-2">
+             {{{feedback}}}
+        </div>
+    {{/feedback}}
+</div>

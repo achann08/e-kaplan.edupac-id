@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-Crossword">
+      <rect width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="Crossword" clip-path="url(#clip-Crossword)">
+    <g id="Group_328" data-name="Group 328" transform="translate(-1272.09 -332.71)">
+      <path id="Path_419" data-name="Path 419" d="M1272.09,332.71v16h16v-16Zm5.137,15.411h-4.548v-4.548h4.548Zm0-5.137h-4.548v-4.548h4.548Zm0-5.137h-4.548V333.3h4.548Zm5.137,10.274h-4.548v-4.548h4.548Zm0-10.274h-4.548V333.3h4.548Zm5.137,10.274h-4.548v-4.548h4.548Zm0-10.274h-4.548V333.3h4.548Z"/>
+      <rect id="Rectangle_187" data-name="Rectangle 187" width="4.548" height="4.548" transform="translate(1282.953 343.573)" fill="#fff"/>
+      <rect id="Rectangle_188" data-name="Rectangle 188" width="4.548" height="4.548" transform="translate(1277.816 343.573)" fill="#fff"/>
+      <rect id="Rectangle_189" data-name="Rectangle 189" width="4.548" height="4.548" transform="translate(1272.679 343.573)" fill="#fff"/>
+      <rect id="Rectangle_190" data-name="Rectangle 190" width="4.548" height="4.548" transform="translate(1272.679 338.436)" fill="#fff"/>
+      <rect id="Rectangle_191" data-name="Rectangle 191" width="4.548" height="4.548" transform="translate(1272.679 333.299)" fill="#fff"/>
+      <rect id="Rectangle_192" data-name="Rectangle 192" width="4.548" height="4.548" transform="translate(1277.816 333.299)" fill="#fff"/>
+      <rect id="Rectangle_193" data-name="Rectangle 193" width="4.548" height="4.548" transform="translate(1282.953 333.299)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

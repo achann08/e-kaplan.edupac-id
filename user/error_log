@@ -1,0 +1,4 @@
+[04-Nov-2024 21:30:58 America/New_York] Default exception handler: You cannot view the profile of this user Debug: 
+Error code: cannotviewprofile
+* line 131 of /user/view.php: moodle_exception thrown
+
